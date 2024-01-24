@@ -1,4 +1,4 @@
-@@ -1,15 +1,15 @@
+
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
