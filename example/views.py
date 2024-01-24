@@ -10,7 +10,7 @@ def index(request):
         <head>
             <style>
                 body {{
-                    background-color: black;
+                    background: linear-gradient(to right, #000000, #6A00FF);
                     color: white;
                     font-family: 'Roboto', sans-serif;
                 }}
@@ -21,7 +21,7 @@ def index(request):
         </head>
         <body>
             <h1>UC DAVIS DATA SCIENCE: SEO 2024 - AYUSH MAJUMDAR, AKSHAJ JOSHI</h1>
-            <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE!</p>
+            <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
         </body>
     </html>
     '''
