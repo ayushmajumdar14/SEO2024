@@ -20,6 +20,9 @@ def index(request):
             height: 100vh; /* Ensure the body takes the full viewport height */
             margin: 0; /* Remove default body margin */
         }
+        header {
+            margin-top: 50px; /* Add top margin to the header */
+        }
         h1, p {
             text-align: center;
             margin-bottom: 20px; /* Add spacing between elements */
@@ -27,8 +30,10 @@ def index(request):
     </style>
 </head>
 <body>
-    <h1>{{ title }} - {{ current_time }}</h1>
-    <p>WELCOME {% for member in members %}{{ member }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    <header>
+        <h1>{{ title }} - {{ current_time }}</h1>
+        <p>WELCOME {% for member in members %}{{ member }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    </header>
 </body>
 </html>
     '''
