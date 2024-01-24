@@ -55,9 +55,9 @@ def index(request):
     
     <nav>
         <a href="{/about/}">About</a>
-        <a href="{% https://seo-2024.vercel.app/ %}">Project Leads</a>
-        <a href="{% https://seo-2024.vercel.app/ %}">Developers</a>
-        <a href="{% https://seo-2024.vercel.app/ %}">Journey</a>
+        <a href="{/project_leads/}">Project Leads</a>
+        <a href="{/developers/}">Developers</a>
+        <a href="{/journey/}">Journey</a>
     </nav>
 </body>
 </html>
