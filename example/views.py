@@ -23,12 +23,19 @@ def index(request):
                 p {{
                     margin-top: 5vh;  /* 5% of the viewport height for subtitle */
                 }}
+                .custom-text-container {{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(to right, #6A00FF, #8E24AA); /* Modify gradient colors as desired */
+                    padding: 20px; /* Add padding for better visibility */
+                    border-radius: 8px; /* Add border radius for rounded corners */
+                }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
+                    font-size: 24px; /* Adjust font size as needed */
                     color: white;
-                    background: linear-gradient(to right, #6A00FF, #8E24AA); /* Modify gradient colors as desired */
-                    padding: 10px; /* Add padding for better visibility */
-                    border-radius: 8px; /* Add border radius for rounded corners */
+                    text-align: center; /* Center the text */
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
@@ -37,7 +44,9 @@ def index(request):
         <body>
             <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
-            <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
+            <div class="custom-text-container">
+                <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
+            </div>
         </body>
     </html>
     '''
