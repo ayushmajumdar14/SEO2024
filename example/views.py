@@ -57,7 +57,7 @@ def index(request):
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    animation: scaleAnimation 2s infinite alternate; /* Animation properties */
+                    animation: gradientAnimation 5s linear infinite; /* Animation properties */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
@@ -66,12 +66,12 @@ def index(request):
                     font-size: 40px;
                     color: white;
                 }}
-                @keyframes scaleAnimation {{
+                @keyframes gradientAnimation {{
                     from {{
-                        transform: scale(1);
+                        background-position: 0% 0%;
                     }}
                     to {{
-                        transform: scale(1.1);
+                        background-position: 100% 100%;
                     }}
                 }}
             </style>
