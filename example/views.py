@@ -49,7 +49,7 @@ def index(request):
                     max-width: 60%;
                     margin: 20vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
-                    padding: 15px;
+                    padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
                     height: 30vh;  /* Increase the overall height */
@@ -57,6 +57,8 @@ def index(request):
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+                    animation: fadeIn 1s forwards; /* Animation duration and fill-mode */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
@@ -64,6 +66,11 @@ def index(request):
                     margin: 0;
                     font-size: 40px;
                     color: white;
+                }}
+                @keyframes fadeIn {{
+                    to {{
+                        opacity: 1; /* Set opacity to 1 at the end of the animation */
+                    }}
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
