@@ -24,7 +24,7 @@ def index(request):
                 }}
                 .custom-text-container {{
                     max-width: 70%;
-                    margin: 10vh auto;  /* Bring the box down */
+                    margin: 30vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
                     padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
