@@ -13,6 +13,7 @@ def index(request):
                     font-family: 'Orbitron', sans-serif;
                     margin: 0;
                     padding: 0;
+                    animation: backgroundAnimation 5s linear infinite; /* Animation properties */
                 }}
                 header {{
                     background: linear-gradient(to right, #333333, #000000);
@@ -57,7 +58,6 @@ def index(request):
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    animation: gradientAnimation 2s linear infinite; /* Faster animation */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
@@ -66,7 +66,7 @@ def index(request):
                     font-size: 40px;
                     color: white;
                 }}
-                @keyframes gradientAnimation {{
+                @keyframes backgroundAnimation {{
                     from {{
                         background-position: 0% 0%;
                     }}
