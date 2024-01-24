@@ -17,9 +17,6 @@ def journey(request):
 def index(request):
     now = datetime.now()
     return render(request, 'index.html', {'now': now})
-# example/urls.py
-from django.urls import path
-from . import views
 
 <!-- templates/index.html -->
 <html>
