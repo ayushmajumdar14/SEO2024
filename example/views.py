@@ -16,7 +16,7 @@ def index(request):
                     margin: 0;  /* Remove default body margin */
                     padding: 0; /* Remove default body padding */
                 }}
-                h1, p {{
+                h1 {{
                     text-align: center;
                     margin-top: 15vh;  /* 15% of the viewport height for title */
                 }}
@@ -24,9 +24,8 @@ def index(request):
                     margin-top: 5vh;  /* 5% of the viewport height for subtitle */
                 }}
                 .custom-text-container {{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    max-width: 80%; /* Set the maximum width for the container */
+                    margin: 0 auto; /* Center the container horizontally */
                     background: linear-gradient(to right, #6A00FF, #8E24AA); /* Modify gradient colors as desired */
                     padding: 20px; /* Add padding for better visibility */
                     border-radius: 8px; /* Add border radius for rounded corners */
