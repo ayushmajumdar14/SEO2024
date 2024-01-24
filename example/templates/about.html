@@ -14,6 +14,23 @@
                 border-bottom: 5px solid #6A00FF; /* Thick border at the bottom */
                 text-align: center;
             }
+            nav {
+                display: flex;
+                justify-content: center;
+                padding: 10px 0;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0 15px; /* Adjust the spacing between elements */
+                transition: color 0.3s;
+            }
+            nav a:hover {
+                color: #6A00FF; /* Change text color on hover */
+            }
             h1 {
                 text-align: center;
                 margin-top: 5vh;
@@ -48,8 +65,14 @@
     </head>
     <body>
         <header>
-            <h1>About Our Project</h1>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/project_leads">Project Leads</a>
+                <a href="/developers">Developers</a>
+                <a href="/journey">Journey</a>
+            </nav>
         </header>
+        <h1>About Our Project</h1>
         <div class="custom-text-container">
             <p class="custom-text">Our SEO project focuses on optimizing the organic search visibility and traffic for a small business website over a six-week period. In the initial two weeks, the team will conduct comprehensive research and planning, including keyword research using tools like Google Keyword Planner and competitor analysis to identify gaps and opportunities. A content audit will be performed to assess and improve existing website content. Weeks three and four will be dedicated to on-page optimization, involving the optimization of existing content, title tags, meta descriptions, and URL structure. Image optimization will also be addressed to enhance loading times and user experience. In week five, the team will tackle technical SEO aspects, including website speed optimization, mobile-friendliness, and the resolution of technical issues such as crawl errors and broken links. Overall, the project aims to enhance the website's overall SEO health and drive increased organic traffic.</p>
         </div>
