@@ -54,7 +54,7 @@ def index(request):
     <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
     
     <nav>
-        <a href="{% https://seo-2024.vercel.app/ %}">About</a>
+        <a href="{/about/}">About</a>
         <a href="{% https://seo-2024.vercel.app/ %}">Project Leads</a>
         <a href="{% https://seo-2024.vercel.app/ %}">Developers</a>
         <a href="{% https://seo-2024.vercel.app/ %}">Journey</a>
