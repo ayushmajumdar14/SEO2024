@@ -23,12 +23,13 @@ def index(request):
                     text-align: center;
                 }}
                 .custom-text-container {{
-                    max-width: 70%;
-                    margin: 30vh auto;  /* Bring the box down */
+                    max-width: 60%;
+                    margin: 20vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
                     padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
+                    height: 80vh;  /* Increase the overall height */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
