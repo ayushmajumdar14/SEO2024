@@ -42,11 +42,13 @@ def index(request):
                 .custom-text {{
                     font-size: 24px;
                     color: white;
+                    max-width: 80%;
                 }}
                 .bold-text {{
                     font-weight: bold;
                     font-size: 40px;
                     color: white;
+                    max-width: 80%;
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
@@ -56,7 +58,7 @@ def index(request):
             <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
-                <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
+                <p class="custom-text">We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence.</p>
             </div>
         </body>
     </html>
