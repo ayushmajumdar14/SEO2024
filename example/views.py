@@ -1,6 +1,8 @@
 from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
+def about(request):
+    return render(request, 'about.html')
 def index(request):
     now = datetime.now()
     html = f'''
@@ -97,10 +99,9 @@ def index(request):
     '''
     return HttpResponse(html)
 
-#def about(request):
-    #return HttpResponse("<h2>About Us Page</h2>")
 def about(request):
-    return render(request, 'about.html')
+    return HttpResponse("<h2>About Us Page</h2>")
+
 
 def project_leads(request):
     return HttpResponse("<h2>Project Leads Page</h2>")
