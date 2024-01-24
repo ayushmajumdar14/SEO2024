@@ -23,12 +23,29 @@ def index(request):
                 p {{
                     margin-top: 5vh;  /* 5% of the viewport height for subtitle */
                 }}
+                nav {{
+                    text-align: center;
+                    margin-top: 2vh;  /* Adjust margin as needed */
+                }}
+                nav a {{
+                    margin: 0 15px;
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-weight: bold;
+                }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
         </head>
         <body>
             <h1>UC DAVIS DATA SCIENCE: SEO 2024 - AYUSH MAJUMDAR, AKSHAJ JOSHI</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
+            
+            <nav>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'project_leads' %}">Project Leads</a>
+                <a href="{% url 'developers' %}">Developers</a>
+                <a href="{% url 'journey' %}">Journey</a>
+            </nav>
         </body>
     </html>
     '''
