@@ -1,8 +1,6 @@
 from datetime import datetime
 from django.http import HttpResponse
-from django.shortcuts import render
-def about(request):
-    return render(request, 'about.html')
+
 def index(request):
     now = datetime.now()
     html = f'''
@@ -10,7 +8,7 @@ def index(request):
         <head>
             <style>
                 body {{
-                    background: linear-gradient(to right, #000000, #6A00FF);
+                    background: #000; /* Solid black background */
                     color: white;
                     font-family: 'Orbitron', sans-serif;
                     margin: 0;
@@ -18,15 +16,16 @@ def index(request):
                     animation: backgroundAnimation 5s linear infinite; /* Animation properties */
                 }}
                 header {{
-                    background: linear-gradient(to right, #333333, #000000);
+                    background: black;
                     padding: 10px 0;
                     border-bottom: 5px solid #6A00FF; /* Thick border at the bottom */
                     text-align: center;
                 }}
                 nav {{
                     display: flex;
-                    justify-content: center;
-                    padding: 10px 0;
+                    justify-content: flex-end; /* Align items to the right */
+                    padding: 10px 20px; /* Add padding to the sides for spacing */
+                    background: #000; /* Set nav background to black */
                 }}
                 nav a {{
                     color: white;
@@ -43,6 +42,9 @@ def index(request):
                 h1 {{
                     text-align: center;
                     margin-top: 5vh;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 40px; /* Adjust font size */
+                    font-weight: bold;
                 }}
                 p {{
                     margin-top: 3vh;
@@ -50,8 +52,8 @@ def index(request):
                 }}
                 .custom-text-container {{
                     max-width: 60%;
-                    margin: 20vh auto;  /* Bring the box down */
-                    background: linear-gradient(to right, #6A00FF, #8E24AA);
+                    margin: 15vh auto;  /* Bring the box down */
+                    border: 5px solid #6A00FF; /* Purple border */
                     padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
@@ -60,6 +62,7 @@ def index(request):
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    background: none; /* Remove background */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
@@ -83,13 +86,13 @@ def index(request):
         <body>
             <header>
                 <nav>
-                    <a href="/about">About</a>
-                    <a href="/project_leads">Project Leads</a>
-                    <a href="/developers">Developers</a>
-                    <a href="/journey">Journey</a>
+                    <a href="#about">About</a>
+                    <a href="#project_leads">Project Leads</a>
+                    <a href="#developers">Developers</a>
+                    <a href="#journey">Journey</a>
                 </nav>
             </header>
-            <h1>ML/AI solution for Search Engine Optimization</h1>
+            <h1>ML/AI Solutions for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
                 <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
@@ -99,8 +102,9 @@ def index(request):
     '''
     return HttpResponse(html)
 
-#def about(request):
-    #return HttpResponse("<h2>About Us Page</h2>")
+
+def about(request):
+    return HttpResponse("<h2>About Us Page</h2>")
 
 
 def project_leads(request):
