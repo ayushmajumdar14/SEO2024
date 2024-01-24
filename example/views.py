@@ -16,38 +16,25 @@ def index(request):
                 }}
                 h1 {{
                     text-align: center;
-                    margin-top: 15vh;
+                    margin-top: 10vh;
                 }}
                 p {{
-                    margin-top: 5vh;
+                    margin-top: 3vh;
                     text-align: center;
                 }}
                 .custom-text-container {{
-                    max-width: 80%;
-                    margin: 20vh auto;  /* Bring the box down */
+                    max-width: 70%;
+                    margin: 10vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
                     padding: 20px;
-                    border-radius: 8px;
+                    border-radius: 15px;  /* Rounded corners */
                     position: relative;
-                    height: 80vh;  /* Quadruple the height of the box */
-                }}
-                .custom-text, .bold-text {{
-                    font-family: 'Poppins', sans-serif;
-                    text-align: center;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    margin: 0;
-                    max-width: 80%;  /* Fit the text within the box */
                 }}
                 .custom-text {{
-                    font-size: 40px;
-                    color: white;
-                }}
-                .bold-text {{
-                    font-weight: bold;
-                    font-size: 40px;
+                    font-family: 'Poppins', sans-serif;
+                    text-align: center;
+                    margin: 0;
+                    font-size: 24px;
                     color: white;
                 }}
             </style>
