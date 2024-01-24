@@ -6,7 +6,7 @@ from django.http import HttpResponse
 def index(request):
     now = datetime.now()
     html = f'''
-    <html>
+<html>
 <head>
     <style>
         body {
