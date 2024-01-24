@@ -1,7 +1,6 @@
-
 from datetime import datetime
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 def index(request):
     now = datetime.now()
     html = f'''
@@ -10,7 +9,6 @@ def index(request):
             <style>
                 body {{
                     background: linear-gradient(to right, #000000, #6A00FF);
-                    background: rgb(3 7 18);
                     color: white;
                     font-family: 'Orbitron', sans-serif;
                     margin: 0;
@@ -52,7 +50,6 @@ def index(request):
                     max-width: 60%;
                     margin: 20vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
-                    background: rgba(60,60,60,0.5);
                     padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
@@ -99,11 +96,15 @@ def index(request):
     </html>
     '''
     return HttpResponse(html)
+
 def about(request):
     return HttpResponse("<h2>About Us Page</h2>")
+
 def project_leads(request):
     return HttpResponse("<h2>Project Leads Page</h2>")
+
 def developers(request):
     return HttpResponse("<h2>Developers Page</h2>")
+
 def journey(request):
     return HttpResponse("<h2>Journey Page</h2>")
