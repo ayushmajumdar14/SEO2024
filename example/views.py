@@ -22,21 +22,20 @@ def index(request):
                 }}
                 nav {{
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
                     padding: 10px 0;
                 }}
                 nav a {{
                     color: white;
                     text-decoration: none;
+                    font-family: 'Poppins', sans-serif;
                     font-size: 18px;
-                    position: relative;
-                    padding: 10px 20px;
-                    border-radius: 20px; /* Rounded corners for the button-like effect */
-                    background: linear-gradient(to right, #6A00FF, #8E24AA);
-                    transition: background 0.3s;
+                    font-weight: bold;
+                    margin: 0 15px; /* Adjust the spacing between elements */
+                    transition: color 0.3s;
                 }}
                 nav a:hover {{
-                    background: #6A00FF; /* Change background color on hover */
+                    color: #6A00FF; /* Change text color on hover */
                 }}
                 h1 {{
                     text-align: center;
