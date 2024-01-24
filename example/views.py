@@ -29,13 +29,13 @@ def index(request):
                     padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
-                    height: 80vh;  /* Increase the overall height */
+                    height: 30vh;  /* Increase the overall height */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
                     text-align: center;
                     margin: 0;
-                    font-size: 24px;
+                    font-size: 40px;
                     color: white;
                 }}
             </style>
