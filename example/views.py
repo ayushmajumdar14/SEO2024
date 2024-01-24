@@ -30,6 +30,10 @@ def index(request):
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
                     height: 30vh;  /* Increase the overall height */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
