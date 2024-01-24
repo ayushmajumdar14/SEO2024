@@ -42,7 +42,7 @@ def index(request):
                     max-width: 80%;  /* Fit the text within the box */
                 }}
                 .custom-text {{
-                    font-size: 24px;
+                    font-size: 40px;
                     color: white;
                 }}
                 .bold-text {{
@@ -58,7 +58,7 @@ def index(request):
             <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
-                <p class="custom-text">We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence.</p>
+                <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
             </div>
         </body>
     </html>
