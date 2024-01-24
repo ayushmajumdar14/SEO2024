@@ -22,7 +22,9 @@ def index(request):
                 }}
                 p {{
                     margin-top: 5vh;  /* 5% of the viewport height for subtitle */
-                    font-family: 'Roboto', sans-serif;
+                }}
+                .custom-text {{
+                    font-family: 'Poppins', sans-serif;
                     color: white;
                     background: linear-gradient(to right, #6A00FF, #8E24AA); /* Modify gradient colors as desired */
                     padding: 10px; /* Add padding for better visibility */
@@ -30,12 +32,12 @@ def index(request):
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
         </head>
         <body>
             <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
-            <p>"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
+            <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
         </body>
     </html>
     '''
