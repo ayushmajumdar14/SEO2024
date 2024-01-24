@@ -12,7 +12,7 @@ def index(request):
                 body {{
                     background: linear-gradient(to right, #000000, #6A00FF);
                     color: white;
-                    font-family: 'Orbitron', sans-serif;
+                    font-family: 'Montserrat', sans-serif;
                 }}
                 h1, p {{
                     text-align: center;
