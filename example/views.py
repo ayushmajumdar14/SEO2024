@@ -9,7 +9,7 @@ def index(request):
         <head>
             <style>
                 body {{
-                    background: linear-gradient(to right, #000000, #6A00FF);
+                    background: rgb(3 7 18);
                     color: white;
                     font-family: 'Orbitron', sans-serif;
                     margin: 0;
@@ -50,7 +50,7 @@ def index(request):
                 .custom-text-container {{
                     max-width: 60%;
                     margin: 20vh auto;  /* Bring the box down */
-                    background: linear-gradient(to right, #6A00FF, #8E24AA);
+                    background: rgba(60,60,60,0.5);
                     padding: 20px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
