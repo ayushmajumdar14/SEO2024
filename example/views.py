@@ -18,7 +18,10 @@ def index(request):
                 }}
                 h1, p {{
                     text-align: center;
-                    margin-top: 25vh;  /* 25% of the viewport height */
+                    margin-top: 15vh;  /* 15% of the viewport height for title */
+                }}
+                p {{
+                    margin-top: 5vh;  /* 5% of the viewport height for subtitle */
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
