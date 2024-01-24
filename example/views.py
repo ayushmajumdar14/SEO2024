@@ -27,7 +27,7 @@ def index(request):
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
         </head>
         <body>
-            <h1>UC DAVIS DATA SCIENCE: SEO 2024 - AYUSH MAJUMDAR, AKSHAJ JOSHI</h1>
+            <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
         </body>
     </html>
