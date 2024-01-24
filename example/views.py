@@ -29,6 +29,14 @@ def index(request):
                     color: white;
                     text-decoration: none;
                     font-size: 18px;
+                    position: relative;
+                    padding: 10px 20px;
+                    border-radius: 20px; /* Rounded corners for the button-like effect */
+                    background: linear-gradient(to right, #6A00FF, #8E24AA);
+                    transition: background 0.3s;
+                }}
+                nav a:hover {{
+                    background: #6A00FF; /* Change background color on hover */
                 }}
                 h1 {{
                     text-align: center;
