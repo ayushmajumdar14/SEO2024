@@ -24,11 +24,12 @@ def index(request):
                 }}
                 .custom-text-container {{
                     max-width: 80%;
-                    margin: 5vh auto;
+                    margin: 20vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
                     padding: 20px;
                     border-radius: 8px;
                     position: relative;
+                    height: 80vh;  /* Quadruple the height of the box */
                 }}
                 .custom-text, .bold-text {{
                     font-family: 'Poppins', sans-serif;
@@ -38,17 +39,16 @@ def index(request):
                     left: 50%;
                     transform: translate(-50%, -50%);
                     margin: 0;
+                    max-width: 80%;  /* Fit the text within the box */
                 }}
                 .custom-text {{
                     font-size: 24px;
                     color: white;
-                    max-width: 80%;
                 }}
                 .bold-text {{
                     font-weight: bold;
                     font-size: 40px;
                     color: white;
-                    max-width: 80%;
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
@@ -58,9 +58,4 @@ def index(request):
             <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
-                <p class="custom-text">We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence.</p>
-            </div>
-        </body>
-    </html>
-    '''
-    return HttpResponse(html)
+                <p class="custom-text">We are a group of UC Davis
