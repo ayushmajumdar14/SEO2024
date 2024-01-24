@@ -1,6 +1,4 @@
-# example/views.py
 from datetime import datetime
-
 from django.http import HttpResponse
 
 def index(request):
@@ -13,39 +11,42 @@ def index(request):
                     background: linear-gradient(to right, #000000, #6A00FF);
                     color: white;
                     font-family: 'Orbitron', sans-serif;
-                    margin: 0;  /* Remove default body margin */
-                    padding: 0; /* Remove default body padding */
+                    margin: 0;
+                    padding: 0;
                 }}
                 h1 {{
                     text-align: center;
-                    margin-top: 15vh;  /* 15% of the viewport height for title */
+                    margin-top: 15vh;
                 }}
                 p {{
-                    margin-top: 5vh;  /* 5% of the viewport height for subtitle */
-                    text-align: center; /* Center the text */
+                    margin-top: 5vh;
+                    text-align: center;
                 }}
                 .custom-text-container {{
-                    max-width: 80%; /* Set the maximum width for the container */
-                    margin: 5vh auto; /* Center the container horizontally and adjust top margin */
-                    background: linear-gradient(to right, #6A00FF, #8E24AA); /* Modify gradient colors as desired */
-                    padding: 20px; /* Add padding for better visibility */
-                    border-radius: 8px; /* Add border radius for rounded corners */
+                    max-width: 80%;
+                    margin: 5vh auto;
+                    background: linear-gradient(to right, #6A00FF, #8E24AA);
+                    padding: 20px;
+                    border-radius: 8px;
+                    position: relative;
                 }}
                 .custom-text, .bold-text {{
                     font-family: 'Poppins', sans-serif;
-                    text-align: center; /* Center the text */
+                    text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0;
                 }}
                 .custom-text {{
-                    font-size: 24px; /* Adjust font size as needed */
+                    font-size: 24px;
                     color: white;
                 }}
                 .bold-text {{
                     font-weight: bold;
-                    font-size: 40px; /* Increase font size */
+                    font-size: 40px;
                     color: white;
-                    max-width: 80%; /* Set the maximum width for the container */
-                    margin: 0 auto; /* Center the text horizontally */
-                    margin-top: 5vh; /* Adjust margin-top for positioning */
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
@@ -56,7 +57,6 @@ def index(request):
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
                 <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
-                <p class="bold-text">We are a group of students dedicated to developing modern AI-powered solutions to enhance online presence.</p>
             </div>
         </body>
     </html>
