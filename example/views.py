@@ -36,6 +36,14 @@ def index(request):
                     color: white;
                     text-align: center; /* Center the text */
                 }}
+                .bold-text {{
+                    font-weight: bold;
+                    font-size: 40px; /* Increase font size */
+                    margin: 0; /* Remove default margin */
+                    text-align: center; /* Center the text */
+                    max-width: 80%; /* Set the maximum width for the container */
+                    margin-top: 5vh; /* Adjust margin-top for positioning */
+                }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
@@ -45,6 +53,7 @@ def index(request):
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
                 <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
+                <p class="bold-text">We are a group of students dedicated to developing modern AI-powered solutions to enhance online presence.</p>
             </div>
         </body>
     </html>
