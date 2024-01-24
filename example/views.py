@@ -13,10 +13,12 @@ def index(request):
                     background: linear-gradient(to right, #000000, #6A00FF);
                     color: white;
                     font-family: 'Orbitron', sans-serif;
+                    margin: 0;  /* Remove default body margin */
+                    padding: 0; /* Remove default body padding */
                 }}
                 h1, p {{
                     text-align: center;
-                    margin-top: 30px;  /* Adjust the top margin as needed */
+                    margin-top: 25vh;  /* 25% of the viewport height */
                 }}
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
