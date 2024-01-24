@@ -57,8 +57,7 @@ def index(request):
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    opacity: 0; /* Initially set opacity to 0 for fade-in effect */
-                    animation: fadeIn 1s forwards; /* Animation duration and fill-mode */
+                    animation: scaleAnimation 2s infinite alternate; /* Animation properties */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
@@ -67,9 +66,12 @@ def index(request):
                     font-size: 40px;
                     color: white;
                 }}
-                @keyframes fadeIn {{
+                @keyframes scaleAnimation {{
+                    from {{
+                        transform: scale(1);
+                    }}
                     to {{
-                        opacity: 1; /* Set opacity to 1 at the end of the animation */
+                        transform: scale(1.1);
                     }}
                 }}
             </style>
