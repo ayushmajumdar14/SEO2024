@@ -54,10 +54,10 @@ def index(request):
     <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
     
     <nav>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'project_leads' %}">Project Leads</a>
-        <a href="{% url 'developers' %}">Developers</a>
-        <a href="{% url 'journey' %}">Journey</a>
+        <a href="{% https://seo-2024.vercel.app/ %}">About</a>
+        <a href="{% https://seo-2024.vercel.app/ %}">Project Leads</a>
+        <a href="{% https://seo-2024.vercel.app/ %}">Developers</a>
+        <a href="{% https://seo-2024.vercel.app/ %}">Journey</a>
     </nav>
 </body>
 </html>
