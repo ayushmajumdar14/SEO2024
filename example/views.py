@@ -57,7 +57,7 @@ def index(request):
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    animation: gradientAnimation 5s linear infinite; /* Animation properties */
+                    animation: gradientAnimation 2s linear infinite; /* Faster animation */
                 }}
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
