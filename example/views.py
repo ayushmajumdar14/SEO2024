@@ -49,7 +49,7 @@ def index(request):
                     max-width: 60%;
                     margin: 20vh auto;  /* Bring the box down */
                     background: linear-gradient(to right, #6A00FF, #8E24AA);
-                    padding: 20px;
+                    padding: 15px;
                     border-radius: 15px;  /* Rounded corners */
                     position: relative;
                     height: 30vh;  /* Increase the overall height */
