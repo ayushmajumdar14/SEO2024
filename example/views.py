@@ -18,6 +18,7 @@ def index(request):
                     text-align: center;
                 }}
             </style>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
         </head>
         <body>
             <h1>UC DAVIS DATA SCIENCE: SEO 2024 - AYUSH MAJUMDAR, AKSHAJ JOSHI</h1>
