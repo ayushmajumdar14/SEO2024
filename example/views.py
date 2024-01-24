@@ -14,9 +14,25 @@ def index(request):
                     margin: 0;
                     padding: 0;
                 }}
+                header {{
+                    background: linear-gradient(to right, #333333, #000000);
+                    padding: 10px 0;
+                    border-bottom: 5px solid #6A00FF; /* Thick border at the bottom */
+                    text-align: center;
+                }}
+                nav {{
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 10px 0;
+                }}
+                nav a {{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                }}
                 h1 {{
                     text-align: center;
-                    margin-top: 10vh;
+                    margin-top: 5vh;
                 }}
                 p {{
                     margin-top: 3vh;
@@ -47,6 +63,14 @@ def index(request):
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
         </head>
         <body>
+            <header>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#project_leads">Project Leads</a>
+                    <a href="#developers">Developers</a>
+                    <a href="#journey">Journey</a>
+                </nav>
+            </header>
             <h1>ML/AI solution for Search Engine Optimization</h1>
             <p>WELCOME ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE</p>
             <div class="custom-text-container">
