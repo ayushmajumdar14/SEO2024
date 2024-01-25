@@ -2,8 +2,6 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def about(request):
-    return render(request, 'about.html')
 
 def index(request):
     now = datetime.now()
@@ -110,10 +108,10 @@ def index(request):
         <body>
             <header>
                 <nav>
+                    
                     <a href="/about">About</a>
-                    <a href="#project_leads">Project Leads</a>
-                    <a href="#developers">Developers</a>
-                    <a href="#journey">Journey</a>
+                    <a href="/team">The Team</a>
+                    <a href="/journey">Journey</a>
                 </nav>
             </header>
             <h1>ML/AI Solutions for Search Engine Optimization</h1>
@@ -129,15 +127,15 @@ def index(request):
     '''
     return HttpResponse(html)
 
-#def about(request):
-    #return HttpResponse("<h2>About Us Page</h2>")
 
+def home(request):
+    return render(request, 'home.html')
 
-def project_leads(request):
-    return HttpResponse("<h2>Project Leads Page</h2>")
+def about(request):
+    return render(request, 'about.html')
 
-def developers(request):
-    return HttpResponse("<h2>Developers Page</h2>")
+def team(request):
+    return render(request, 'team.html')
 
 def journey(request):
-    return HttpResponse("<h2>Journey Page</h2>")
+    return render(request, 'journey.html')
