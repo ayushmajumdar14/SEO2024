@@ -129,8 +129,8 @@ def index(request):
     '''
     return HttpResponse(html)
 
-def about(request):
-    return HttpResponse("<h2>About Us Page</h2>")
+#def about(request):
+    #return HttpResponse("<h2>About Us Page</h2>")
 
 
 def project_leads(request):
