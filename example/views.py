@@ -103,6 +103,7 @@ def index(request):
 
 
 
+
 #def about(request):
     #return HttpResponse("<h2>About Us Page</h2>")
 
