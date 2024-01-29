@@ -33,6 +33,10 @@
                 nav a:hover {
                     color: #6A00FF; /* Change text color on hover */
                 }
+                nav a.current {
+                    color:#6A00FF
+                }
+                     
                 h1 {
                     text-align: center;
                     margin-top: 5vh;
@@ -50,7 +54,7 @@
                     margin: 15vh auto;  /* Bring the box down */
                     border: 5px solid #6A00FF; /* Purple border */
                     padding: 20px;
-                    border-radius: 15px;  /* Rounded corners */
+                    border-radius: 30px;  /* Rounded corners */
                     position: relative;
                     height: 30vh;  /* Increase the overall height */
                     display: flex;
@@ -58,11 +62,16 @@
                     justify-content: center;
                     align-items: center;
                     background: none; /* Remove background */
-                    transition: background 0.3s; /* Add transition effect */
+                    transition: border-radius 1s, box-shadow 0.7s;
                     box-shadow: 0px 0px 30px 10px rgba(106, 0, 255, 0.8);
                 }
                 .custom-text-container:hover {
-                    background: #6A00FF;  
+                    /*background: #6A00FF;*/
+                    background-color: rgba(106, 0, 255, 0.2);
+                    transition: background 1s; /* Add transition effect */ 
+                    transition: border-radius 1s, box-shadow 0.7s;
+                    border-radius: 80px;
+                    box-shadow: 0px 0px 50px 30px rgba(106, 0, 255, 0.8);
                 }
                 .custom-text {
                     font-family: 'Poppins', sans-serif;
@@ -92,13 +101,14 @@
         <body>
             <header>
                 <nav>
+                    <a href="/home" class="current">Home</a>
                     <a href="/about">About</a>
                     <a href="/team">The Team</a>
                     <a href="/journey">Journey</a>
                 </nav>
             </header>
             <h1>ML/AI Solutions for Search Engine Optimization</h1>
-            <p>🎉 Welcome ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, TRYAMBAK AND AIMEE 🎉</p>
+            <p>🎉 Welcome ANKITA, ANUNAY, ASISE, COREY, SARAYU, TYLER, AND AIMEE 🎉</p>
             <div class="custom-text-container">
                 <p class="custom-text">"We are a group of UC Davis students aiming to develop modern AI-powered solutions to improve your website's online presence."</p>
             </div>

@@ -57,12 +57,16 @@
             nav a:hover {
                     color: #6A00FF; /* Change text color on hover */
                 }
+            nav a.current {
+                color: #6A00FF;
+                    
+            }
             
             h1 {
                 text-align: center;
                 margin-top: 5vh;
                 font-family: 'Roboto', sans-serif;
-                font-size: 40px; /* Adjust font size */
+                font-size: 60px; /* Adjust font size */
                 font-weight: bold;
             }
             p {
@@ -71,26 +75,29 @@
             }
 
             .custom-text-container {
-                max-width: 60%;
-                margin: 10vh auto;  /* Bring the box down */
+                display: inline-block;
+                max-width: content-box;
+                margin: 10vh auto;
                 background: none;
-                box-shadow: 0px 0px 30px 10px rgba(106, 0, 255, 0.8);
-                border-radius: 15px;  /* Rounded corners */
                 position: relative;
-                height: auto;  /* Increase the overall height */
-                display: flex;
+                height: auto; /* Set the height to auto */
                 padding: 25px;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .custom-text {
                 font-family: 'Poppins', sans-serif;
-                text-align: center;
+                text-align: left;
                 margin: 0;
-                font-size: 20px;
-                color: white;
-            }
+                font-size: 45px;
+                font-weight: bold;
+                /*
+                text-decoration: underline;            
+                text-decoration-color: #6A00FF;    
+                text-underline-offset: 15px;    
+                text-decoration-thickness: 5px; */
+            }               
+
+
+
+
+            
         </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
@@ -100,14 +107,13 @@
             <nav>
                 <a href="/home">Home</a>
                 <a href="/about">About</a>
-                <a href="/team">The Team</a>
+                <a href="/team" class = "current">The Team</a>
                 <a href="/journey">Journey</a>
             </nav>  
         </header>
         <h1>Meet The Team</h1>
         <div class="custom-text-container">
-            <p>Project Leads: Ayush Majumdar & Akshaj Joshi</p>
-            <p>Developers: Ankita Khatri, Anunay Akhaury, Asise Bhinder, Corey Chen, Sarayu Mummidi, Tyler Guo, Tryambak Tripathi, & Aimee Tsai</p>
+            <p>Project Leads:</p>
         </div>
     </body>
 </html>

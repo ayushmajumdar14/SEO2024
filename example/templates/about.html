@@ -54,6 +54,10 @@
                     margin: 0 15px; /* Adjust the spacing between elements */
                     transition: color 0.3s;
                 }
+                nav a.current {
+                    color: #6A00FF;
+                    
+                }
             nav a:hover {
                     color: #6A00FF; /* Change text color on hover */
                 }
@@ -72,18 +76,26 @@
 
             .custom-text-container {
                 max-width: 60%;
-                margin: 10vh auto;  /* Bring the box down */
+                margin: 10vh auto;
                 background: none;
                 box-shadow: 0px 0px 30px 10px rgba(106, 0, 255, 0.8);
-                border-radius: 15px;  /* Rounded corners */
+                border-radius: 30px;
                 position: relative;
-                height: auto;  /* Increase the overall height */
+                height: auto;
                 display: flex;
                 padding: 25px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                transition: border-radius 1s, box-shadow 0.7s; 
             }
+
+            .custom-text-container:hover {
+                box-shadow: 0px 0px 50px 30px rgba(106, 0, 255, 0.8);
+                border-radius: 80px;
+                transition: border-radius 1s, box-shadow 0.7s; /* Separate transition duration for each property */
+            }
+
             .custom-text {
                 font-family: 'Poppins', sans-serif;
                 text-align: center;
@@ -99,7 +111,7 @@
         <header>
             <nav>
                 <a href="/home">Home</a>
-                <a href="/about">About</a>
+                <a href="/about" class="current">About</a>
                 <a href="/team">The Team</a>
                 <a href="/journey">Journey</a>
             </nav>  
