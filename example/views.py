@@ -8,7 +8,7 @@ def index(request):
     html = f'''
 <html>
         <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
                 body {
                     background: #111; /* Solid black background */
