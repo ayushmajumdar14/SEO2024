@@ -57,12 +57,12 @@ def index(request):
                     font-family: 'Poppins', sans-serif;
                 }}
         
-                .custom-text-container {{
+                .custom-text-container {
                     max-width: 60%;
                     margin: 15vh auto;  /* Bring the box down */
                     border: 5px solid #6A00FF; /* Purple border */
                     padding: 20px;
-                    border-radius: 15px;  /* Rounded corners */
+                    border-radius: 30px;  /* Rounded corners */
                     position: relative;
                     height: 30vh;  /* Increase the overall height */
                     display: flex;
@@ -70,12 +70,17 @@ def index(request):
                     justify-content: center;
                     align-items: center;
                     background: none; /* Remove background */
-                    transition: background 0.3s; /* Add transition effect */
+                    transition: border-radius 1s, box-shadow 0.7s;
                     box-shadow: 0px 0px 30px 10px rgba(106, 0, 255, 0.8);
-                }}
-                .custom-text-container:hover {{
-                    background: #6A00FF;  
-                }}
+                }
+                .custom-text-container:hover {
+                    /*background: #6A00FF;*/
+                    background-color: rgba(106, 0, 255, 0.2);
+                    transition: background 1s; /* Add transition effect */ 
+                    transition: border-radius 1s, box-shadow 0.7s;
+                    border-radius: 80px;
+                    box-shadow: 0px 0px 50px 30px rgba(106, 0, 255, 0.8);
+                }
                 .custom-text {{
                     font-family: 'Poppins', sans-serif;
                     text-align: center;
