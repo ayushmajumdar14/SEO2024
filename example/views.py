@@ -111,7 +111,7 @@ def index(request):
         <body>
             <header>
                 <nav>
-                    <a href="/home" class = "current">Home</a?
+                    <a href="/home" class="current">Home</a>
                     <a href="/about">About</a>
                     <a href="/team">The Team</a>
                     <a href="/journey">Journey</a>
