@@ -4,8 +4,8 @@ from example.views import index
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('home/', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('project_leads/', views.project_leads, name='project_leads'),
-    path('developers/', views.developers, name='developers'),
+    path('team/', views.team, name='team'),
     path('journey/', views.journey, name='journey'),
 ]
