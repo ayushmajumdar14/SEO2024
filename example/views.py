@@ -2,12 +2,14 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def about(request):
-    return render(request, 'about.html')
 
 def index(request):
     now = datetime.now()
     
+    return render(request, 'home.html')
+
+
+def home(request):
     return render(request, 'home.html')
 
 def about(request):
@@ -21,4 +23,5 @@ def developers(request):
     return render(request, 'developers.html')
 
 def journey(request):
+    return render(request, 'journey.html')
     return render(request, 'journey.html')
