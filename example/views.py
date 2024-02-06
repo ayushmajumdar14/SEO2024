@@ -4,12 +4,6 @@ from django.shortcuts import render
 
 
 def index(request):
-    now = datetime.now()
-    
-    return render(request, 'home.html')
-
-
-def home(request):
     return render(request, 'home.html')
 
 def about(request):
@@ -24,4 +18,6 @@ def developers(request):
 
 def journey(request):
     return render(request, 'journey.html')
-    return render(request, 'journey.html')
+
+def team(request):
+    return render(request, 'team.html')
