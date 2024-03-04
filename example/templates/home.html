@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
     <style>
       body {
         background: #111;
@@ -65,11 +66,30 @@
         justify-content: center;
         align-items: center;
         background: none;
-        transition: background 0.3s;
+        transition: border-radius 1s, box-shadow 0.7s;
         box-shadow: 0px 0px 30px 10px rgba(106, 0, 255, 0.8);
+
+        opacity: 0;
       }
+
+        /* Fade-in animation */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .custom-text-container {
+        animation: fadeIn 2s ease forwards;
+      }
+      
       .custom-text-container:hover {
-        background: #6a00ff;
+        box-shadow: 0px 0px 50px 30px rgba(106, 0, 255, 0.8);
+        border-radius: 80px;
+        transition: border-radius 1s, box-shadow 0.7s; /* Separate transition duration for each property */
       }
       .custom-text {
         font-family: "Poppins", sans-serif;
@@ -108,6 +128,9 @@
         <a href="/about">About</a>
         <a href="/team">The Team</a>
         <a href="/journey">Journey</a>
+        <a href="/tool">Tool</a>
+
+        
       </nav>
     </header>
     <h1>ML/AI Solutions for Search Engine Optimization</h1>

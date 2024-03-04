@@ -1,119 +1,174 @@
-<html>
-  <head>
-    <style>
-      body {
-        background: #111;
-        color: white;
-        font-family: "Poppin", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(-45deg, #120319, #190d2a);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-        z-index: -1;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet The Team</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: "Poppin", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #120319, #190d2a);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      z-index: -1;
+    }
 
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
       }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-      header {
-        background: #111;
-        padding: 10px 0;
-        border-bottom: 5px solid #6a00ff; /* Thick border at the bottom */
+    header {
+      background: #111;
+      padding: 10px 0;
+      border-bottom: 5px solid #6a00ff; /* Thick border at the bottom */
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: flex-end; /* Align items to the right */
+      padding: 10px 20px; /* Add padding to the sides for spacing */
+      background: #111; /* Set nav background to black */
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 15px; /* Adjust the spacing between elements */
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #6a00ff; /* Change text color on hover */
+    }
+    nav a.current {
+      color: #6a00ff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 5vh;
+      font-family: "Roboto", sans-serif;
+      font-size: 60px; /* Adjust font size */
+      font-weight: bold;
+    }
+    p {
+      margin-top: 3vh;
+      text-align: center;
+    }
+
+    .custom-text-container {
+      display: inline-block;
+      max-width: content-box;
+      margin: 10vh auto;
+      background: none;
+      position: relative;
+      height: auto; /* Set the height to auto */
+      padding: 25px;
+      font-family: "Poppins", sans-serif;
+      text-align: left;
+      margin: 0;
+      font-size: 45px;
+      font-weight: bold;
+
+    }
+
+    .project-lead-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .project-lead {
         text-align: center;
-      }
-      nav {
-        display: flex;
-        justify-content: flex-end; /* Align items to the right */
-        padding: 10px 20px; /* Add padding to the sides for spacing */
-        background: #111; /* Set nav background to black */
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-family: "Poppins", sans-serif;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 0 15px; /* Adjust the spacing between elements */
-        transition: color 0.3s;
-      }
-      nav a:hover {
-        color: #6a00ff; /* Change text color on hover */
-      }
-      nav a.current {
-        color: #6a00ff;
-      }
+        margin: 0 20px;
+    }
 
-      h1 {
-        text-align: center;
-        margin-top: 5vh;
-        font-family: "Roboto", sans-serif;
-        font-size: 60px; /* Adjust font size */
-        font-weight: bold;
-      }
-      p {
-        margin-top: 3vh;
-        text-align: center;
-      }
+   .project-lead img {
+        width: 200px; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Make image round */
+    }
+   
 
-      .custom-text-container {
-        display: inline-block;
-        max-width: content-box;
-        margin: 10vh auto;
-        background: none;
-        position: relative;
-        height: auto; /* Set the height to auto */
-        padding: 25px;
-        font-family: "Poppins", sans-serif;
-        text-align: left;
-        margin: 0;
-        font-size: 45px;
-        font-weight: bold;
-        /*
-                text-decoration: underline;            
-                text-decoration-color: #6A00FF;    
-                text-underline-offset: 15px;    
-                text-decoration-thickness: 5px; */
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/team" class="current">The Team</a>
-        <a href="/journey">Journey</a>
-      </nav>
-    </header>
-    <h1>Meet The Team</h1>
-    <div class="custom-text-container">
-      <p>Project Leads:</p>
+    footer {
+      background: #333;
+      font-family: "Poppins", sans-serif;
+      padding: 10px 0;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    footer p {
+      color: white;
+      margin: 0;
+    }
+  </style>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+  />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/team" class="current">Tmanahe Team</a>
+      <a href="/journey">Journey</a>
+      <a href="/tool">Tool</a>
+    </nav>
+  </header>
+  <h1>Project Leads</h1>
+  <div class="project-lead-container">
+      <div class="project-lead">
+        <img src="example/templates/istockphoto-1345388323-612x612.jpg" alt="Project Lead 1">
+        <h2>Ayush Majumdar</h2>
+      </div>
+      <div class="project-lead">
+        <img src="example/templates/istockphoto-1345388323-612x612.jpg" alt="Project Lead 2">
+        <h2>Akshaj Joshi</h2>
+      </div>
     </div>
-  </body>
+    <div class="team-section">
+      <p>Developers:</p>
+      <ul>
+        <li>Developer 1</li>
+        <li>Developer 2</li>
+        <li>Developer 3</li>
+        <li>Developer 4</li>
+        <li>Developer 5</li>
+        <li>Developer 6</li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <p>Made with ❤️ by UC Davis Data Science Club</p>
+  </footer>
+</body>
 </html>
