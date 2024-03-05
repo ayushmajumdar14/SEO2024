@@ -48,7 +48,7 @@ def crawl_website(start_url):
                 industries.extend(general_industries_names)
 
         # Break the loop if three distinct industries have been identified
-        if len(set(industries)) >= 3:
+        if len(set(industries)) >= 5:
             break
 
     # Calculate the three most common industries
@@ -62,7 +62,7 @@ def google_search(search_terms):
     combined_search_query = ' OR '.join(search_terms)  # Combine industries into one search query
     service = build("customsearch", "v1", developerKey=api_key)
     res = service.cse().list(q=combined_search_query, cx=cse_id).execute()
-    links = [item['link'] for item in res['items'][:5]]  # Extract and store the first 5 items
+    links = [item['link'] for item in res['items'][:20]]  # Extract and store the first 5 items
     return links
 
 # New function to extract keywords from articles
@@ -71,7 +71,7 @@ def google_search(search_terms):
 def extract_keywords_from_links(links):
     all_keywords = set()  # Using a set to avoid duplicate keywords
     for link in links:
-        if len(all_keywords) >= 10:  # Stop if we have gathered at least 10 unique keywords
+        if len(all_keywords) >= 20:  # Stop if we have gathered at least 10 unique keywords
             break
         article_data = get_industry_from_diffbot(link)  # Reusing the function to get the article data
         if article_data and 'tags' in article_data:
@@ -79,7 +79,7 @@ def extract_keywords_from_links(links):
             for tag in tags:
                 if 'label' in tag:
                     all_keywords.add(tag['label'])  # Add unique keywords
-                if len(all_keywords) >= 10:  # Break if we have reached 10 unique keywords
+                if len(all_keywords) >= 20:  # Break if we have reached 10 unique keywords
                     break
     return list(all_keywords)  # Return the collected unique keywords, aiming for at least 10
 

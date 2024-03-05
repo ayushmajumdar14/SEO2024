@@ -29,4 +29,14 @@ def team(request):
 def tool(request):
     return render(request, 'tool.html')
 
+def scrape(request):
+    if request.method == 'POST':
+        url = request.POST.get('url')
+        industries = crawl_website(url)
+        links = google_search(industries)
+        keywords = extract_keywords_from_links(links)
+        return JsonResponse({'keywords': keywords})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
+
 

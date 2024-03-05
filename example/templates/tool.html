@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <title>Our Tool</title>
+{% csrf_token %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -134,18 +135,54 @@
         background-image: linear-gradient(to bottom right, #ea2de6, #6400f0); /* Gradient on hover */
         transform: scale(1.05); /* Enlarge on hover */
       }
+
+      #loading-container {
+        display: none; /* Initially hide the loading container */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Set a high z-index to overlay on top of other elements */
+      }
+
+      #loading-circle {
+        border: 8px solid #f3f3f3; /* Light gray border */
+        border-top: 8px solid #6a00ff; /* Blue border for animation */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite; /* Rotate animation */
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
       #keywords-container {
-        max-width: 88%; /* Add unit */
-        margin: 40vh auto 0; /* Adjust margin to create space between containers */
-        text-align: left; /* Left align text */
+        max-width: 88%;
+        margin: 40vh auto 0;
+        text-align: left;
         font-size: 24px;
         background-color: None;
         border: 2px solid #6a00ff;
         border-radius: 10px;
         padding: 20px;
         color: white;
+        display: flex; /* Use flex container for horizontal layout */
+        flex-wrap: wrap; /* Allow keywords to wrap if not enough space */
+        justify-content: flex-start; /* Align keywords to the start */
       }
 
+      #keywords-container p {
+        margin-right: 10px; /* Adjust spacing between keywords */
+        color: white;
+        padding: 5px 10px;
+      }
 
       footer {
         background: #333;
@@ -189,9 +226,10 @@
           <button onclick="sendUrl()">Submit</button>
         </div>
     </div>
-    <div id = "keywords-container">
-        <div class="keywords-heading">Keywords:</div>
+    <div id="loading-container">
+      <div id="loading-circle"></div>
     </div>
+    <div id = "keywords-container">Keywords:</div>
     <div id="result-industries"></div>
     <div id="result-links"></div>
     <div id="result-keywords"></div>
@@ -202,8 +240,56 @@
         });
     </script>
     <script>
-      
+      function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+      }
+
+      function sendUrl() {
+        // Show loading container while grabbing keywords
+        var loadingContainer = document.getElementById("loading-container");
+        loadingContainer.style.display = "flex";
+
+        var url = document.getElementById("url-input").value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/scrape/", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        var csrftoken = getCookie('csrftoken'); // Obtain CSRF token
+        xhr.setRequestHeader("X-CSRFToken", csrftoken); // Set CSRF token in request headers
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            // Hide loading container after grabbing keywords
+            loadingContainer.style.display = "none";
+            displayKeywords(response.keywords);
+          }
+        };
+        var data = 'url=' + encodeURIComponent(url);
+        xhr.send(data);
+      }
+
+      function displayKeywords(keywords) {
+        var keywordsContainer = document.getElementById("keywords-container");
+        keywordsContainer.innerHTML = ""; // Clear previous keywords
+        keywords.forEach(function (keyword) {
+          var p = document.createElement("p");
+          p.textContent = keyword;
+          keywordsContainer.appendChild(p);
+        });
+      }
     </script>
+    
 
     <footer>
         <p>Made with ❤️ by UC Davis Data Science Club</p>
