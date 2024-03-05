@@ -72,6 +72,13 @@
       font-size: 60px; /* Adjust font size */
       font-weight: bold;
     }
+    h2 {
+      text-align: center;
+      margin-top: 5vh;
+      font-family: "Roboto", sans-serif;
+      font-size: 40px; /* Adjust font size */
+      font-weight: bold;
+    }
     p {
       margin-top: 3vh;
       text-align: center;
@@ -124,6 +131,32 @@
       color: white;
       margin: 0;
     }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+    }
+
+  li {
+      width: calc(33.33% - 10px);
+      margin-bottom: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      margin: 0 auto;
+      margin-bottom: 5px;
+    }
   </style>
   <link
     rel="stylesheet"
@@ -147,23 +180,37 @@
   <h1>Project Leads</h1>
   <div class="project-lead-container">
       <div class="project-lead">
-        <img src="example/templates/istockphoto-1345388323-612x612.jpg" alt="Project Lead 1">
+        {% comment %} <img src="example/templates/empty_profile_pic.svg" alt="Project Lead 1">
         <h2>Ayush Majumdar</h2>
       </div>
       <div class="project-lead">
-        <img src="example/templates/istockphoto-1345388323-612x612.jpg" alt="Project Lead 2">
-        <h2>Akshaj Joshi</h2>
+        <img src="example/templates/empty_profile_pic.svg" alt="Project Lead 2">
+        <h2>Akshaj Joshi</h2> {% endcomment %}
+        <ul>
+          <li>
+            <img src="example/templates/istockphoto-1345388323-612x612.jpg">
+            Ayush Majumdar</li>
+          <li><img src="example/templates/empty_profile_pic.svg">
+            Akshaj Joshi</li>
+        </ul>
       </div>
     </div>
     <div class="team-section">
-      <p>Developers:</p>
+      <h2>Developers</h2>
       <ul>
-        <li>Developer 1</li>
-        <li>Developer 2</li>
-        <li>Developer 3</li>
-        <li>Developer 4</li>
-        <li>Developer 5</li>
-        <li>Developer 6</li>
+        <li>
+          <img src="example/templates/empty_profile_pic.svg">
+          Aimee Tsai</li>
+        <li>
+          <img src="example/templates/empty_profile_pic.svg" >Ankita Khatri</li>
+        <li>
+          <img src="example/templates/empty_profile_pic.svg">Anunay Akhaury</li>
+        <li>
+          <img src="example/templates/empty_profile_pic.svg" >Corey Chen</li>
+        <li>
+          <img src="example/templates/empty_profile_pic.svg">Dheeksha M</li>
+        <li>
+          <img src="example/templates/empty_profile_pic.svg" >Tyler Guo</li>
       </ul>
     </div>
   </div>
