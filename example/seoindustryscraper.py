@@ -5,7 +5,7 @@ from googleapiclient.discovery import build
 # Function to get industry from Diffbot
 def get_industry_from_diffbot(url):
     api_url = "https://api.diffbot.com/v3/article"
-    api_key = "cf4cd0544b4bbae862e8b792c7959881"  # Replace with your Diffbot API key
+    api_key = "4a71f6094674860fb26e1bb82234db5f"  # Replace with your Diffbot API key
     params = {
         'token': api_key,
         'url': url,
@@ -34,7 +34,7 @@ def crawl_website(start_url):
     current_url = start_url
     industries = []
 
-    while len(set(industries)) < 3:  # Loop until there are at least three distinct industries
+    while len(set(industries)) < 4:  # Loop until there are at least three distinct industries
         article_data = get_industry_from_diffbot(current_url)
 
         if article_data:
@@ -43,16 +43,18 @@ def crawl_website(start_url):
 
             if specific_industry:
                 industries.extend(specific_industry.split(', '))
+                print("specific industry found")
             elif general_industries:
                 general_industries_names = [category.get('name', '') for category in general_industries]
                 industries.extend(general_industries_names)
+                print("general industry found")
 
         # Break the loop if three distinct industries have been identified
-        if len(set(industries)) >= 5:
+        if len(set(industries)) >= 4:
             break
 
     # Calculate the three most common industries
-    most_common_industries = Counter(industries).most_common(3)
+    most_common_industries = Counter(industries).most_common(4)
     return [industry for industry, count in most_common_industries]
 
 # Function to perform Google Custom Search
@@ -62,7 +64,7 @@ def google_search(search_terms):
     combined_search_query = ' OR '.join(search_terms)  # Combine industries into one search query
     service = build("customsearch", "v1", developerKey=api_key)
     res = service.cse().list(q=combined_search_query, cx=cse_id).execute()
-    links = [item['link'] for item in res['items'][:20]]  # Extract and store the first 5 items
+    links = [item['link'] for item in res['items'][:5]]  # Extract and store the first 5 items
     return links
 
 # New function to extract keywords from articles
@@ -75,7 +77,7 @@ def extract_keywords_from_links(links):
             break
         article_data = get_industry_from_diffbot(link)  # Reusing the function to get the article data
         if article_data and 'tags' in article_data:
-            tags = article_data['tags'][:5]  # Attempt to get up to five tags per article
+            tags = article_data['tags'][:20]  # Attempt to get up to five tags per article
             for tag in tags:
                 if 'label' in tag:
                     all_keywords.add(tag['label'])  # Add unique keywords

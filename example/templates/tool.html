@@ -229,7 +229,9 @@
     <div id="loading-container">
       <div id="loading-circle"></div>
     </div>
-    <div id = "keywords-container">Keywords:</div>
+    <div id = "keywords-container">Keywords:
+      <!--<div id = "output"></div> -->
+    </div>
     <div id="result-industries"></div>
     <div id="result-links"></div>
     <div id="result-keywords"></div>
@@ -239,6 +241,8 @@
           this.style.outlineColor = "white"
         });
     </script>
+
+
     <script>
       function getCookie(name) {
         var cookieValue = null;
@@ -273,12 +277,19 @@
             // Hide loading container after grabbing keywords
             loadingContainer.style.display = "none";
             displayKeywords(response.keywords);
+            //displayIndustries(response.industries);
+
           }
         };
         var data = 'url=' + encodeURIComponent(url);
         xhr.send(data);
       }
 
+      /* function displayIndustries(industries) {
+        var outputContainer = document.getElementById("output");
+        outputContainer.innerHTML = "Industries: " + industries.join(', ');
+      } */
+      
       function displayKeywords(keywords) {
         var keywordsContainer = document.getElementById("keywords-container");
         keywordsContainer.innerHTML = ""; // Clear previous keywords
@@ -287,7 +298,7 @@
           p.textContent = keyword;
           keywordsContainer.appendChild(p);
         });
-      }
+      } 
     </script>
     
 
