@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -188,9 +189,9 @@
         <h2>Akshaj Joshi</h2> {% endcomment %}
         <ul>
           <li>
-            <img src="example/templates/istockphoto-1345388323-612x612.jpg">
+            <img src="{% static "staticfiles/empty_profile_pic.svg" %}">
             Ayush Majumdar</li>
-          <li><img src="example/templates/empty_profile_pic.svg">
+          <li><img src="{% static "/staticfiles/istockphoto-1345388323-612x612.jpg" %}">
             Akshaj Joshi</li>
         </ul>
       </div>
