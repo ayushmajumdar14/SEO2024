@@ -10,4 +10,4 @@ urlpatterns = [
     path('journey/', views.journey, name='journey'),
     path('tool/', views.tool, name='tool'),
     path('scrape/', views.scrape, name='scrape'),
-]
+] 
